@@ -94,11 +94,12 @@ nav.active{
 nav{
     width: 300px;
     position: fixed;
-    top: 87px;
+    top: 0px;
     left: -120%;
     background: var(--white);
     padding: 30px 0px;
     height: 100%;
+    z-index: 9999999;
 }
 nav .user{
     display: flex;
@@ -328,7 +329,6 @@ hr{
     -webkit-align-items: center;
     align-items: center;
   }
-
   .swiper-slide img {
     display: block;
     width: 100%;
@@ -336,3 +336,102 @@ hr{
     object-fit: cover;
   }
 /* products ends */
+/* featured products starts */
+.featured-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media(max-width:568px){
+    .featured-cards{
+        display: grid;
+        grid-template-columns: 1fr;
+    }   
+}
+.smallImg{
+    position: absolute;
+    max-width: 90px;
+    left: 20px;
+    border: 1px solid;
+    cursor: pointer;
+}
+.smallImg1{
+    top: 50px;
+}
+.smallImg2{
+    top: 190px;
+}
+.smallImg3{
+    top: 330px;
+}
+/* featured products ends */
+/* deal starts */
+
+.dealMain{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    height: 45vh;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.dealText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.dealText p{
+    color: var(--orange);font-size: 20px;text-transform: capitalize;
+}
+.dealText h2{
+    color: var(--black);font-size: 36px;text-transform: capitalize;padding: 10px;
+}
+.timerDiv{
+    display: flex;
+    gap: 10px;
+}
+.timerDiv .days,.timerDiv .hours,.timerDiv .minutes,.timerDiv .seconds{
+    color: var(--orange);font-size: 36px;text-transform: capitalize;padding: 5px;font-weight: 600;
+}
+.dealBg{
+    background-image: url('../images/counter-img.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+
+}
+/* deal ends */
+
+/* testimonials starts */
+.test-cards{
+    display: flex;
+    margin: 60px 0;
+}
+.test-card{
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px;
+}
+.test-card .stars,.test-card .lorem,.test-card .test.footer{
+    padding: 10px 0px;
+}
+.test-card .testFooter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px;
+}
+.test-card img{
+    max-width: 80px;
+    border-radius: 50%;
+}
+.test-card .cardText{
+    border-top: 0;
+}
+/* testimonials ends */
